@@ -17,6 +17,8 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
 }
 
 .container {
@@ -27,6 +29,34 @@ body {
     border-radius: 20px;
     position: relative;
     backdrop-filter: blur(8px);
+    display: grid;
+    grid-template-columns: 20% 40% 40%;
+    justify-content: center;
+    align-self: center;
+}
+
+header {
+    text-align: center;
+    border-right: 2px solid white;
+}
+
+h1,
+h3,
+p {
+    margin: 10px;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+p {
+    font-size: 20px;
 }
 
 .bg__image {
@@ -47,7 +77,6 @@ body {
     left: 0%;
 }
 
-
 @keyframes spin-circle {
     form {
         transform: rotate(0deg);
@@ -56,4 +85,27 @@ body {
     to {
         transform: rotate(360deg);
     }
+}
+
+div.reg {
+    text-align: center;
+    display: grid;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+input {
+    justify-self: center;
+    outline: none;
+    width: 12vw;
+    height: 4vh;
+    background: rgba(0, 0, 0, .75);
+    background: linear-gradient(to right top, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1));
+    border: 2px solid white;
+    color: white;
+    padding: 10px;
+}
+
+input::placeholder {
+    text-align: center;
+    color: white;
 }
