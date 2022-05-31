@@ -7,6 +7,7 @@
 :root {
     --bg-color-black: #1b1b1b;
     --bg-color-blue: #6495ED;
+    --white: #fff
 }
 
 body {
@@ -18,7 +19,7 @@ body {
     align-items: center;
     overflow: hidden;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: white;
+    color: var(--white);
 }
 
 .container {
@@ -37,7 +38,7 @@ body {
 
 header {
     text-align: center;
-    border-right: 2px solid white;
+    border-right: 2px solid var(--white);
 }
 
 h1,
@@ -73,8 +74,9 @@ p {
 
 .bg__image-cubes {
     width: 40%;
-    top: 20%;
+    top: 15%;
     left: 0%;
+    animation: shaker 10s linear infinite;
 }
 
 @keyframes spin-circle {
@@ -84,6 +86,20 @@ p {
 
     to {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes shaker {
+    0% {
+        top: 15%;
+    }
+
+    50% {
+        top: 20%;
+    }
+
+    100% {
+        top: 15%;
     }
 }
 
@@ -99,13 +115,29 @@ input {
     width: 12vw;
     height: 4vh;
     background: rgba(0, 0, 0, .75);
-    background: linear-gradient(to right top, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1));
-    border: 2px solid white;
-    color: white;
+    background: linear-gradient(to right top, rgba(0, 0, 0, .2), rgba(0, 0, 0, .1));
+    border: 2px solid var(--white);
+    color: var(--white);
     padding: 10px;
 }
 
 input::placeholder {
     text-align: center;
-    color: white;
+    color: var(--white);
+}
+
+div.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid var(--white);
+}
+
+textarea {
+    background: rgba(0, 0, 0, .75);
+    background: linear-gradient(to right top, rgba(0, 0, 0, .2), rgba(0, 0, 0, .1));
+    resize: none;
+    color: var(--white);
+    padding: 10px;
+    font-size: 18px;
 }
