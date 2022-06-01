@@ -105,8 +105,45 @@ p {
 div.reg {
     text-align: center;
     display: grid;
-    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas:
+        "text text"
+        "name login"
+        "surname password"
+        "phone email"
+    ;
 }
+
+/* Input alignment */
+
+label {
+    grid-area: text;
+}
+
+input#name {
+    grid-area: name;
+}
+
+input#surname {
+    grid-area: surname;
+}
+
+input#email {
+    grid-area: email;
+}
+
+input#tel {
+    grid-area: phone;
+}
+
+input#password {
+    grid-area: password;
+}
+
+input#login {
+    grid-area: login;
+}
+
+/* End of input alignment */
 
 input {
     justify-self: center;
