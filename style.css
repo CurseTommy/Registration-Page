@@ -105,7 +105,7 @@ p {
 div.reg {
     text-align: center;
     display: grid;
-    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-rows: auto auto auto auto auto auto;
 }
 
 input {
