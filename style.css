@@ -105,6 +105,7 @@ p {
 div.reg {
     text-align: center;
     display: grid;
+    padding: 10px;
     grid-template-areas:
         "text text"
         "name login"
