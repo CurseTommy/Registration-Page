@@ -12,7 +12,9 @@
 
 <body>
     <div class="lang-change">
-
+        <p>Wybór języka</p>
+        <button class="chng-lang" id="PL">PL</button>
+        <button class="chng-lang" id="ENG">ENG</button>
     </div>
     <div class="bg">
         <img src="images/circle.png" alt="Circle" class="bg__image bg__image-circle">
@@ -38,7 +40,7 @@
         <div class="text">
             <h2>Jeśli masz do nas jakieś dodatkowe pytania podziel się nimi.</h2>
             <textarea name="text" id="text" cols="45" rows="10" placeholder="Wiadomość..."></textarea>
-            <button>
+            <button class="sing-up">
                 <polish>Zarejestruj!</polish>
                 <english hidden>Sign up!</english>
             </button>
@@ -46,6 +48,24 @@
     </div>
     <script>
         $(document).ready(function () {
+            var $eng = $("#ENG")
+            var $pl = $("#PL")
+            $eng.click(function () {
+                $eng.addClass("spin")
+                window.setTimeout(function () {
+                    $eng.removeClass("spin");
+                }, 1000);
+                $("english").removeAttr("hidden")
+                $("polish").attr("hidden", 1)
+            });
+            $pl.click(function () {
+                $pl.addClass("spin")
+                window.setTimeout(function () {
+                    $pl.removeClass("spin");
+                }, 1000);
+                $("english").attr("hidden", 1)
+                $("polish").removeAttr("hidden")
+            });
         });
     </script>
 </body>
