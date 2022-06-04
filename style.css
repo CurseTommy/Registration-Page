@@ -158,11 +158,13 @@ input {
     padding: 10px;
     outline-color: var(--white);
     outline-style: hidden;
+    text-align: center
 }
 
 input::placeholder {
     text-align: center;
     color: var(--white);
+    opacity: .4;
 }
 
 div.text {
