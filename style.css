@@ -208,7 +208,7 @@ button.sing-up {
     box-shadow: 0px 0px 24px 0px var(--bg-color-black);
     cursor: pointer;
     transition: width .2s, padding .2s, bottom .2s;
-    animation: left-right 6s linear infinite;
+    animation: top-bottom-bg 6s linear infinite;
 }
 
 button.sing-up:focus {
@@ -217,7 +217,7 @@ button.sing-up:focus {
     bottom: 75%;
 }
 
-@keyframes left-right {
+@keyframes top-bottom-bg {
     0% {
         left: 50%;
     }
@@ -260,10 +260,16 @@ div.lang-change {
         "text text"
         "pl eng";
     justify-content: center;
+    gap: 10px;
+}
+
+@media (max-width: 1900px) {
+    div.lang-change {
+        height: 12%;
+    }
 }
 
 button.chng-lang {
-    width: 3vw;
     height: 3vh;
     border-radius: 20px;
     color: white;
@@ -289,7 +295,7 @@ div.lang-change p {
 }
 
 .spin {
-    animation: spin 1s linear;
+    animation: spin .6s linear;
 }
 
 @keyframes spin {

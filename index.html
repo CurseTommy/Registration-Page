@@ -12,9 +12,12 @@
 
 <body>
     <div class="lang-change">
-        <p>Wybór języka</p>
-        <button class="chng-lang" id="PL">PL</button>
-        <button class="chng-lang" id="ENG">ENG</button>
+        <p>
+            <polish>Wybór języka:</polish>
+            <english hidden>Language selection:</english>
+        </p>
+        <button class="chng-lang" id="PL" style="width: 3vw;">PL</button>
+        <button class="chng-lang" id="ENG" style="width: 3vw;">ENG</button>
     </div>
     <div class="bg">
         <img src="images/circle.png" alt="Circle" class="bg__image bg__image-circle">
@@ -22,13 +25,22 @@
     </div>
     <div class="container">
         <header>
-            <h1>Opis</h1>
-            <p>Witamy na strone rejestracyjnej do poratlu ... (Tekst)</p>
+            <h1>
+                <polish>Opis</polish>
+                <english hidden>Description</english>
+            </h1>
+            <p>
+                <polish>Witamy na strone rejestracyjnej do poratlu ... (Tekst)</polish>
+                <english hidden>Welcome to the registration page for poratlu ... (Text)</english>
+            </p>
         </header>
 
         <div class="reg">
             <label for="reg-main">
-                <h3>Proszę podać dane do rejestracji:</h3>
+                <h3>
+                    <polish>Proszę podać dane do rejestracji:</polish>
+                    <english hidden>Please enter your registration details:</english>
+                </h3>
             </label>
             <input type="text" name="name" id="name" placeholder="Imię">
             <input type="text" name="surname" id="surname" placeholder="Nazwisko">
@@ -38,7 +50,10 @@
             <input type="text" name="login" id="login" placeholder="Login">
         </div>
         <div class="text">
-            <h2>Jeśli masz do nas jakieś dodatkowe pytania podziel się nimi.</h2>
+            <h2>
+                <polish>Jeśli masz do nas jakieś dodatkowe pytania podziel się nimi.</polish>
+                <english hidden>If you have any additional questions for us, please share them.</english>
+            </h2>
             <textarea name="text" id="text" cols="45" rows="10" placeholder="Wiadomość..."></textarea>
             <button class="sing-up">
                 <polish>Zarejestruj!</polish>
@@ -48,24 +63,45 @@
     </div>
     <script>
         $(document).ready(function () {
-            var $eng = $("#ENG")
-            var $pl = $("#PL")
+
+            var $eng = $("#ENG");
+            var $pl = $("#PL");
+
+
             $eng.click(function () {
-                $eng.addClass("spin")
+                $eng.addClass("spin");
                 window.setTimeout(function () {
                     $eng.removeClass("spin");
-                }, 1000);
-                $("english").removeAttr("hidden")
-                $("polish").attr("hidden", 1)
+                    $eng.attr("style", "width: 3vw;");
+                }, 600);
+                $("english").removeAttr("hidden");
+                $("polish").attr("hidden", 1);
+                $eng.attr("style", "width: 2vw;");
+                $("textarea").attr("placeholder", "Message...");
+                $("#name").attr("placeholder", "Name")
+                $("#surname").attr("placeholder", "Surname")
+                $("#tel").attr("placeholder", "Phone Number")
+                $("#password").attr("placeholder", "Password")
             });
+
+
             $pl.click(function () {
-                $pl.addClass("spin")
+                $pl.addClass("spin");
                 window.setTimeout(function () {
                     $pl.removeClass("spin");
-                }, 1000);
-                $("english").attr("hidden", 1)
-                $("polish").removeAttr("hidden")
+                    $pl.attr("style", "width: 3vw;");
+                }, 600);
+                $("english").attr("hidden", 1);
+                $("polish").removeAttr("hidden");
+                $pl.attr("style", "width: 2vw;");
+                $("textarea").attr("placeholder", "Wiadomość...");
+                $("#name").attr("placeholder", "Imię")
+                $("#surname").attr("placeholder", "Nazwisko")
+                $("#tel").attr("placeholder", "Numer Telefonu")
+                $("#password").attr("placeholder", "Hasło")
             });
+
+
         });
     </script>
 </body>
