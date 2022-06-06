@@ -239,7 +239,7 @@ button.sing-up:focus {
     }
 }
 
-h2 {
+div.text h2 {
     padding: 25px;
     text-align: center;
     position: absolute;
@@ -306,4 +306,29 @@ div.lang-change p {
     to {
         transform: rotate(360deg);
     }
+}
+
+div h4 {
+    font-size: 32px;
+    width: 25vw;
+    height: 25vh;
+    background: linear-gradient(to right top, rgba(0, 0, 0, .6), rgba(100, 149, 237, .8));
+    border: 2px solid var(--bg-color-blue);
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    z-index: -1;
+    transition: 1s ease-in-out;
+}
+
+
+.appear {
+    opacity: 1;
+    z-index: 1;
 }

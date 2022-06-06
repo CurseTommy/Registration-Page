@@ -61,11 +61,20 @@
             </button>
         </div>
     </div>
+
+    <div>
+        <h4>
+            <polish>Resjestracja udana! :)</polish>
+            <english hidden>Successful registration! :)</english>
+        </h4>
+    </div>
+
     <script>
         $(document).ready(function () {
 
             var $eng = $("#ENG");
             var $pl = $("#PL");
+            var $alert = $("h4")
 
 
             $eng.click(function () {
@@ -101,6 +110,12 @@
                 $("#password").attr("placeholder", "Hasło");
             });
 
+            $("button").click(function () {
+                $alert.addClass("appear");
+                window.setTimeout(function () {
+                    $alert.removeClass("appear");
+                }, 3000)
+            })
 
         });
     </script>
